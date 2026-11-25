@@ -5,7 +5,7 @@ use thiserror::Error;
 
 #[derive(Error, Debug)]
 enum DumpError {
-    #[error("cartridge hdr dump : File not found.")]
+    #[error("uni-kk hdr dump : File not found.")]
     FileNotFound,
 }
 
