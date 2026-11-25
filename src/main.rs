@@ -11,5 +11,12 @@ use crate::{
 
 fn main() {
     let args = &Args::parse();
-    handle_args(&args.command);
+
+    match handle_args(&args.command) {
+        Ok(_) => {}
+        Err(e) => {
+            println!("{}", e);
+            std::process::exit(1);
+        }
+    }
 }
