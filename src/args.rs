@@ -30,7 +30,7 @@ pub enum SubCommand {
     /// Cartridge header interface
     Hdr {
         #[command(subcommand)]
-        sub_command: SubSubCommand,
+        sub_command: Option<SubSubCommand>,
     }
 }
 
@@ -41,5 +41,5 @@ pub enum SubCommand {
 pub struct Args {
     /// Command to execute
     #[command(subcommand)]
-    command: SubCommand
+    pub(crate) command: Option<SubCommand>
 }
